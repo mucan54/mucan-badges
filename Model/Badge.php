@@ -31,7 +31,7 @@ class Badge extends AbstractModel implements BadgeInterface
     /**
      * @inheritDoc
      */
-    public function getBadgeId()
+    public function getBadgeId(): ?string
     {
         return $this->getData(self::BADGE_ID);
     }
@@ -39,7 +39,7 @@ class Badge extends AbstractModel implements BadgeInterface
     /**
      * @inheritDoc
      */
-    public function setBadgeId($badgeId)
+    public function setBadgeId($badgeId): \Mucan\Badges\Badge\Api\Data\BadgeInterface
     {
         return $this->setData(self::BADGE_ID, $badgeId);
     }
@@ -47,7 +47,7 @@ class Badge extends AbstractModel implements BadgeInterface
     /**
      * @inheritDoc
      */
-    public function getBadge()
+    public function getBadge(): ?string
     {
         return $this->getData(self::BADGE);
     }
@@ -55,7 +55,7 @@ class Badge extends AbstractModel implements BadgeInterface
     /**
      * @inheritDoc
      */
-    public function setBadge($badge)
+    public function setBadge($badge): \Mucan\Badges\Badge\Api\Data\BadgeInterface
     {
         return $this->setData(self::BADGE, $badge);
     }
@@ -63,7 +63,39 @@ class Badge extends AbstractModel implements BadgeInterface
     /**
      * @inheritDoc
      */
-    public function getBadgeName()
+    public function getBadgeWidth(): ?string
+    {
+        return $this->getData(self::BADGE_WIDTH);
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function setBadgeWidth($badge): \Mucan\Badges\Badge\Api\Data\BadgeInterface
+    {
+        return $this->setData(self::BADGE_WIDTH, $badge);
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function setBadgeHeight($badgeId): \Mucan\Badges\Badge\Api\Data\BadgeInterface
+    {
+        return $this->setData(self::BADGE_HEIGHT, $badgeId);
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function getBadgeHeight(): ?string
+    {
+        return $this->getData(self::BADGE_HEIGHT);
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function getBadgeName(): ?string
     {
         return $this->getData(self::BADGE_NAME);
     }
@@ -71,7 +103,7 @@ class Badge extends AbstractModel implements BadgeInterface
     /**
      * @inheritDoc
      */
-    public function setBadgeName($badgeName)
+    public function setBadgeName($badgeName): \Mucan\Badges\Badge\Api\Data\BadgeInterface
     {
         return $this->setData(self::BADGE_NAME, $badgeName);
     }
@@ -79,7 +111,7 @@ class Badge extends AbstractModel implements BadgeInterface
     /**
      * @inheritDoc
      */
-    public function getBadgeColor()
+    public function getBadgeColor(): ?string
     {
         return $this->getData(self::BADGE_COLOR);
     }
@@ -87,7 +119,7 @@ class Badge extends AbstractModel implements BadgeInterface
     /**
      * @inheritDoc
      */
-    public function setBadgeColor($badgeColor)
+    public function setBadgeColor($badgeColor): \Mucan\Badges\Badge\Api\Data\BadgeInterface
     {
         return $this->setData(self::BADGE_COLOR, $badgeColor);
     }
@@ -95,7 +127,7 @@ class Badge extends AbstractModel implements BadgeInterface
     /**
      * @inheritDoc
      */
-    public function getBadgeImage()
+    public function getBadgeImage(): ?string
     {
         return $this->getData(self::BADGE_IMAGE);
     }
@@ -103,7 +135,7 @@ class Badge extends AbstractModel implements BadgeInterface
     /**
      * @inheritDoc
      */
-    public function setBadgeImage($badgeImage)
+    public function setBadgeImage($badgeImage): \Mucan\Badges\Badge\Api\Data\BadgeInterface
     {
         return $this->setData(self::BADGE_IMAGE, $badgeImage);
     }
@@ -111,7 +143,7 @@ class Badge extends AbstractModel implements BadgeInterface
     /**
      * @inheritDoc
      */
-    public function getImageUrl()
+    public function getImageUrl(): ?string
     {
         return $this->getData(self::IMAGE_URL);
     }

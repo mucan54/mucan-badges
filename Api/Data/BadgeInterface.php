@@ -17,6 +17,8 @@ interface BadgeInterface
 {
     const BADGE = 'badge';
     const BADGE_ID = 'badge_id';
+    const BADGE_WIDTH = 'badge_width';
+    const BADGE_HEIGHT = 'badge_height';
     const BADGE_NAME = 'badge_name';
     const BADGE_COLOR = 'badge_color';
     const BADGE_IMAGE = 'badge_image';
@@ -33,6 +35,32 @@ interface BadgeInterface
      * @return \Mucan\Badges\Badge\Api\Data\BadgeInterface
      */
     public function setBadgeId(string $badgeId): \Mucan\Badges\Badge\Api\Data\BadgeInterface;
+
+    /**
+     * Get badge_width
+     * @return string|null
+     */
+    public function getBadgeWidth(): ?string;
+
+    /**
+     * Set badge_width
+     * @param string $badgeId
+     * @return \Mucan\Badges\Badge\Api\Data\BadgeInterface
+     */
+    public function setBadgeWidth(string $badgeId): \Mucan\Badges\Badge\Api\Data\BadgeInterface;
+
+    /**
+     * Get badge_height
+     * @return string|null
+     */
+    public function getBadgeHeight(): ?string;
+
+    /**
+     * Set badge_height
+     * @param string $badgeId
+     * @return \Mucan\Badges\Badge\Api\Data\BadgeInterface
+     */
+    public function setBadgeHeight(string $badgeId): \Mucan\Badges\Badge\Api\Data\BadgeInterface;
 
     /**
      * Get badge

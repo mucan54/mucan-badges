@@ -109,20 +109,22 @@ class Save extends Action
     {
         if (isset($params['badge_image']) && is_array($params['badge_image'])) {
             $imageId = $params['badge_image'][0];
-            if (!file_exists($imageId['tmp_name'])) {
+            if (isset($imageId['tmp_name']) && !file_exists($imageId['tmp_name'])) {
                 $imageId['tmp_name'] = $imageId['path'] . '/' . $imageId['file'];
                 $params['badge_image'] = $this->moveFileFromTmp($imageId);
+            } else {
+                $params['badge_image'] = $imageId['name'];
             }
         }
         return $params;
     }
 
     /**
-     * @param string $imageId
+     * @param array $imageId
      * @return string
      * @throws LocalizedException
      */
-    private function moveFileFromTmp(string $imageId): string
+    private function moveFileFromTmp(array $imageId): string
     {
         $baseTmpImagePath = $imageId['tmp_name'];
         $type = explode("/", $imageId['type'])[1];

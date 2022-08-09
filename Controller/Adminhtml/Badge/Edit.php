@@ -53,7 +53,7 @@ class Edit extends \Mucan\Badges\Controller\Adminhtml\Badge
                 return $resultRedirect->setPath('*/*/');
             }
         }
-        $this->_coreRegistry->register('mucan_badges_badge', $model);
+        $this->coreRegistry->register('mucan_badges_badge', $model);
 
         // 3. Build edit form
         /** @var \Magento\Backend\Model\View\Result\Page $resultPage */

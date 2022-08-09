@@ -30,9 +30,9 @@ abstract class GenericButton
     /**
      * Return model ID
      *
-     * @return int|null
+     * @return string|null
      */
-    public function getModelId(): ?int
+    public function getModelId(): ?string
     {
         return $this->context->getRequest()->getParam('badge_id');
     }

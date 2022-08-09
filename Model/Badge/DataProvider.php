@@ -84,7 +84,7 @@ class DataProvider extends AbstractDataProvider
             $this->dataPersistor->clear('mucan_badges_badge');
         }
 
-        return $this->loadedData;
+        return $this->loadedData ?? "";
     }
 
     /**

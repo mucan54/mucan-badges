@@ -31,8 +31,7 @@ $badgeHeight = ($block->getBadgeHeight() ?? 40) . 'px';
     <span class="product-image-wrapper">
         <div class="badge-container"
               alt="<?= $escaper->escapeHtmlAttr($block->getBadgeName()) ?>"
-              style="<?= $badgeColor ? "background-color: $badgeColor;" : "" ?>
-              <?= $badgeImage ? "background-image: url('$badgeImage');" : "" ?>
+              style="<?= $badgeColor ? "background-color: $badgeColor;" : "" ?><?= $badgeImage ? "background-image: url('$badgeImage');" : "" ?>
               <?= "width: $badgeWidth; height: $badgeHeight;" ?>">
             <span class="badge-container-text" style="<?= $badgeTextColor ? "color: $badgeTextColor;" : "" ?>" >
                 <?= $escaper->escapeHtmlAttr($block->getBadgeText()) ?>

@@ -70,7 +70,7 @@ class ImageFactoryPlugin
         $newTemplate = $proceed($product, $imageId, $attributes);
         $newTemplate->setTemplate('Mucan_Badges::product/image_with_borders.phtml');
         $newTemplate->setData('badge_name', $badge->getBadgeName());
-        $newTemplate->setData('badge_text', $badge->getBadgeName());
+        $newTemplate->setData('badge_text', $badge->getBadgeText());
         $newTemplate->setData('badge_color', $badge->getBadgeColor());
         $newTemplate->setData('badge_image', $this->getMediaUrl($badge->getBadgeImage()));
 

@@ -72,7 +72,7 @@
             <settings>
                 <dataType>text</dataType>
                 <label translate="true">Badge Text</label>
-                <dataScope>badge</dataScope>
+                <dataScope>badge_text</dataScope>
                 <validation>
                     <rule name="required-entry" xsi:type="boolean">false</rule>
                 </validation>

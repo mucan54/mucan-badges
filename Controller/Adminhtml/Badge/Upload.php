@@ -20,6 +20,7 @@ use Magento\Framework\Exception\LocalizedException;
 use Magento\Framework\Filesystem;
 use Magento\MediaStorage\Model\File\UploaderFactory;
 use Magento\Store\Model\StoreManagerInterface;
+use Magento\Framework\Filesystem\Directory\Write;
 
 /**
  * Class Upload
@@ -29,7 +30,7 @@ class Upload extends \Magento\Backend\App\Action
 {
     protected UploaderFactory $uploaderFactory;
 
-    protected WriteInterface $mediaDirectory;
+    protected Write $mediaDirectory;
 
     protected StoreManagerInterface $storeManager;
 

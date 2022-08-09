@@ -75,8 +75,8 @@ class BadgeActions extends Column
                             ),
                             'label' => __('Delete'),
                             'confirm' => [
-                                'title' => __('Delete "${ $.$data.title }"'),
-                                'message' => __('Are you sure you wan\'t to delete a "${ $.$data.title }" record?')
+                                'title' => __('Delete '. $item['badge_name'] .'?'),
+                                'message' => __('Are you sure you wan\'t to delete a '.$item['badge_name'].' record?')
                             ]
                         ]
                     ];

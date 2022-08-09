@@ -18,6 +18,7 @@ use Mucan\Badges\Api\BadgeRepositoryInterface;
 use Mucan\Badges\Api\Data\BadgeInterface;
 use Mucan\Badges\Api\Data\BadgeInterfaceFactory;
 use Mucan\Badges\Api\Data\BadgeSearchResultsInterfaceFactory;
+use Mucan\Badges\Api\Data\BadgeSearchResultsInterface;
 use Mucan\Badges\Model\ResourceModel\Badge as ResourceBadge;
 use Mucan\Badges\Model\ResourceModel\Badge\CollectionFactory as BadgeCollectionFactory;
 
@@ -33,7 +34,7 @@ class BadgeRepository implements BadgeRepositoryInterface
 
     protected BadgeCollectionFactory $badgeCollection;
 
-    protected Badge $searchResultsFactory;
+    protected BadgeSearchResultsInterfaceFactory $searchResultsFactory;
 
     protected CollectionProcessorInterface $collectionProcessor;
 
@@ -61,7 +62,7 @@ class BadgeRepository implements BadgeRepositoryInterface
     /**
      * @inheritDoc
      */
-    public function save(BadgeInterface $badge)
+    public function save(BadgeInterface $badge): BadgeInterface
     {
         try {
             $this->resource->save($badge);
@@ -77,7 +78,7 @@ class BadgeRepository implements BadgeRepositoryInterface
     /**
      * @inheritDoc
      */
-    public function get($badgeId)
+    public function get($badgeId): BadgeInterface
     {
         $badge = $this->badgeFactory->create();
         $this->resource->load($badge, $badgeId);
@@ -92,7 +93,7 @@ class BadgeRepository implements BadgeRepositoryInterface
      */
     public function getList(
         \Magento\Framework\Api\SearchCriteriaInterface $criteria
-    ) {
+    ): BadgeSearchResultsInterface {
         $collection = $this->badgeCollection->create();
 
         $this->collectionProcessor->process($criteria, $collection);
@@ -113,7 +114,7 @@ class BadgeRepository implements BadgeRepositoryInterface
     /**
      * @inheritDoc
      */
-    public function delete(BadgeInterface $badge)
+    public function delete(BadgeInterface $badge): bool
     {
         try {
             $badgeModel = $this->badgeFactory->create();
@@ -131,7 +132,7 @@ class BadgeRepository implements BadgeRepositoryInterface
     /**
      * @inheritDoc
      */
-    public function deleteById($badgeId)
+    public function deleteById($badgeId): bool
     {
         return $this->delete($this->get($badgeId));
     }
