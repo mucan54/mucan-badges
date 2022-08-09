@@ -1,0 +1,22 @@
+<?xml version="1.0" ?>
+<!--
+/**
+ * Mucan Package
+ *
+ * @copyright Mucan (https://github.com/mucan54)
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Acl/etc/acl.xsd">
+	<acl>
+		<resources>
+			<resource id="Magento_Backend::admin">
+				<resource id="Mucan_Badges::Badge" title="Badge" sortOrder="10">
+					<resource id="Mucan_Badges::Badge_save" title="Save Badge" sortOrder="10"/>
+					<resource id="Mucan_Badges::Badge_delete" title="Delete Badge" sortOrder="20"/>
+					<resource id="Mucan_Badges::Badge_update" title="Update Badge" sortOrder="30"/>
+					<resource id="Mucan_Badges::Badge_view" title="View Badge" sortOrder="40"/>
+				</resource>
+			</resource>
+		</resources>
+	</acl>
+</config>

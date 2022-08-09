@@ -1,0 +1,14 @@
+<?xml version="1.0" ?>
+<!--
+/**
+ * Mucan Package
+ *
+ * @copyright Mucan (https://github.com/mucan54)
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+	<menu>
+		<add id="Mucan::top_level" title="Mucan" module="Mucan_Badges" sortOrder="9999" resource="Magento_Backend::content"/>
+		<add id="Mucan_Badges::mucan_badges_badge" title="Badge" module="Mucan_Badges" sortOrder="9999" resource="Magento_Backend::content" parent="Mucan::top_level" action="mucan_badges/badge/index"/>
+	</menu>
+</config>

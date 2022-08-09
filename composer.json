@@ -1,0 +1,22 @@
+{
+    "name": "mucan54/module-badges",
+    "description": "Add badges to products easily",
+    "type": "magento2-module",
+    "license": "GPL-3.0",
+    "authors": [
+        {
+            "name": "Can Ozdemir",
+            "email": "mucan54@hotmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Mucan\\Badges\\": ""
+        }
+    }
+}

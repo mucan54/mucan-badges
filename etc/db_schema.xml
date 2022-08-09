@@ -1,0 +1,23 @@
+<?xml version="1.0" ?>
+<!--
+/**
+ * Mucan Package
+ *
+ * @copyright Mucan (https://github.com/mucan54)
+ */
+-->
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+	<table name="mucan_badges_badge" resource="default" engine="innodb" comment="mucan_badges_badge Table">
+		<column xsi:type="int" name="badge_id" padding="10" unsigned="true" nullable="false" identity="true" comment="Entity Id"/>
+		<column xsi:type="text" name="badge_name" nullable="false" comment="Badge Name"/>
+		<column xsi:type="text" name="badge_color" comment="Badge Color"/>
+		<column xsi:type="text" name="badge_text_color" comment="Badge Text Color"/>
+		<column xsi:type="text" name="badge_image" comment="Badge Image"/>
+		<column xsi:type="text" name="badge_width" comment="Badge Width"/>
+		<column xsi:type="text" name="badge_height" comment="Badge Height"/>
+		<constraint xsi:type="primary" referenceId="PRIMARY">
+			<column name="badge_id"/>
+		</constraint>
+		<column name="badge" nullable="true" xsi:type="text" comment="badge"/>
+	</table>
+</schema>

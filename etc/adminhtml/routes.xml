@@ -1,0 +1,15 @@
+<?xml version="1.0" ?>
+<!--
+/**
+ * Mucan Package
+ *
+ * @copyright Mucan (https://github.com/mucan54)
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:App/etc/routes.xsd">
+	<router id="admin">
+		<route frontName="mucan_badges" id="mucan_badges">
+			<module before="Magento_Backend" name="Mucan_Badges"/>
+		</route>
+	</router>
+</config>
