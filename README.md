@@ -20,6 +20,7 @@ Add badges to products easily
  - Unzip the zip file in `app/code/Mucan/Badges`
  - Enable the module by running `php bin/magento module:enable Mucan_Badges`
  - Apply database updates by running `php bin/magento setup:upgrade`\*
+ - Apply less file compilation `php bin/magento setup:static-content:deploy`\*
  - Flush the cache by running `php bin/magento cache:flush`
 
 ### Type 2: Composer
