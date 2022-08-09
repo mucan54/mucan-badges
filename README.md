@@ -36,10 +36,15 @@ Add badges to products easily
 
 
 ## Configuration
+You will see Mucan menu on left and you can reach badges on it.
 ![](doc/menu.png)
+On the grid you can see existing badges and you can create new one via Add new Badge button.
 ![](doc/grid.png)
+In the form you should fill all the nessesary fields as you wish and you can create.
 ![](doc/form.png)
+And in the product detail page, all the badges will be appear under badges dropdown.
 ![](doc/attribute.png)
+And the badge will appear on the frontend.
 ![](doc/product.png)
 
 
